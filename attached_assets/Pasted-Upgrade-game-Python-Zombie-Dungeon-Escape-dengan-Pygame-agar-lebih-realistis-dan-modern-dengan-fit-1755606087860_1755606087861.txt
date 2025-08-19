@@ -1,0 +1,48 @@
+Upgrade game Python "Zombie Dungeon Escape" dengan Pygame agar lebih realistis dan modern dengan fitur:
+
+1. Texture Map & Assets:
+   - Gunakan tilemap dengan texture (contoh: dungeon floor, stone wall, iron door).
+   - Player dan zombie menggunakan sprite gratis (ambil placeholder dari assets/).
+   - Item seperti potion, sword, shield, skill icon juga gunakan sprite.
+   - Ukuran tile 32x32 pixel.
+
+2. Fog of War:
+   - Map tidak langsung terekspos.
+   - Buat radius penglihatan player (contoh: 5 tile).
+   - Tile di luar radius diberi efek shadow/fog (gelap).
+   - Enemy/zombie hanya terlihat jika masuk area pandang.
+
+3. Battle Mode:
+   - Tetap gunakan UI grafis, bukan console.
+   - Skill toolbar di bawah layar ala MOBA:
+     - Q = Attack (lempar dadu).
+     - W = Defend.
+     - E = Use Potion.
+     - R = Special Skill (buff/drop item).
+   - Gunakan icon gratis untuk tiap skill (placeholder di assets/skills/).
+   - HP/Mana bar dengan texture, bukan hanya rectangle.
+
+4. UI & UX:
+   - Buat minimap kecil di kanan atas.
+   - Minimap hanya menampilkan area yang sudah dijelajahi (fog of war juga berlaku di minimap).
+   - Timer countdown dengan font digital yang stylish.
+   - Toolbar horizontal untuk skill + inventory slot (1-3) di bagian bawah.
+   - Potion menampilkan jumlah tersisa.
+
+5. Struktur Project:
+   - main.py (game loop utama).
+   - settings.py (konfigurasi).
+   - labyrinth.py (generator labirin dengan texture + fog of war).
+   - player.py, zombie.py, items.py (class entity).
+   - battle.py (sistem battle dengan UI skill toolbar).
+   - ui.py (HP bar, skill toolbar, minimap, fog system).
+   - assets/ (sprite gratis: tiles, player, zombie, items, icons).
+
+6. Spesifikasi Teknis:
+   - Python 3.10+ dan Pygame.
+   - Modular dengan OOP (Player, Zombie, Item, Battle).
+   - Komentar jelas di setiap bagian kode.
+   - Kode harus bisa dijalankan dengan `python main.py`.
+   - Gunakan free assets/textures (contoh dari Kenney.nl, OpenGameArt.org, atau Itch.io free packs).
+
+Tujuan: Game dungeon crawler survival dengan grafis lebih bagus, fog of war, dan UI modern ala MOBA.

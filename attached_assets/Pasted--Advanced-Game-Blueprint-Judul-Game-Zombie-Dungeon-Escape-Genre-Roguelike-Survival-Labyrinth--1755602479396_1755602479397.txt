@@ -1,0 +1,102 @@
+🎮 Advanced Game Blueprint
+
+Judul Game: Zombie Dungeon Escape
+Genre: Roguelike Survival + Labyrinth Puzzle + Turn-Based RPG
+
+1. 🎯 Gameplay Loop
+
+Player spawn di labirin dengan timer.
+
+Player bergerak (WASD/panah) untuk cari jalan keluar.
+
+Zombie spawn dari pinggir map, mengejar player.
+
+Kalau player bertabrakan dengan zombie → masuk Battle Mode (text/ASCII).
+
+Battle Mode:
+
+Player & zombie bergantian menyerang.
+
+Attack/Defend ditentukan lempar dadu (random 1–6).
+
+Bisa gunakan inventori (potion, senjata, buff).
+
+Kalau menang → player kembali ke mode labirin.
+
+Kalau kalah → game over.
+
+Kalau berhasil keluar dari labirin → naik level (lebih susah).
+
+Setelah level tertentu → muncul Boss Battle.
+
+2. 🔹 Sistem Game
+a) Labirin Escape
+
+Dibuat dengan algoritma maze generator (contoh: recursive backtracking).
+
+Player punya timer (misalnya 2 menit per level).
+
+UI menampilkan: HP, Timer, Inventori.
+
+b) Zombie Survival
+
+Zombie spawn secara periodik dari pinggir map.
+
+AI Zombie sederhana: bergerak ke arah player (chase).
+
+Jumlah zombie bertambah setiap level.
+
+c) Dungeon Dice Battle
+
+Mode teks (bisa console atau overlay di pygame).
+
+Turn-Based Combat:
+
+Player memilih: Attack, Defend, Use Item.
+
+Lempar dadu → menentukan damage/defense.
+
+Zombie juga menyerang dengan cara sama.
+
+Sistem HP & inventori.
+
+Item bisa berupa:
+
+Potion (+HP)
+
+Sword (+attack)
+
+Shield (+defense)
+
+d) Level & Progression
+
+Setiap level →
+
+Labirin lebih besar.
+
+Timer lebih singkat.
+
+Zombie lebih cepat & lebih banyak.
+
+Battle lebih sulit.
+
+Setiap 5 level → muncul Boss dengan HP besar.
+
+3. 📁 Struktur Project
+zombie_dungeon_escape/
+│── main.py          # entry point
+│── settings.py      # config game (screen size, colors, constants)
+│── labyrinth.py     # sistem labirin
+│── player.py        # class Player
+│── zombie.py        # class Zombie
+│── battle.py        # sistem battle (text-based dice combat)
+│── items.py         # class Item & Inventori
+│── utils.py         # helper functions
+│── assets/          # folder untuk sprite & sound
+│   │── player.png
+│   │── zombie.png
+│   │── boss.png
+│   │── potion.png
+│   │── sword.png
+│   │── shield.png
+

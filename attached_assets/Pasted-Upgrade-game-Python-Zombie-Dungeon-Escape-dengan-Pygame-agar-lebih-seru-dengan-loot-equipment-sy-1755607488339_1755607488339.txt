@@ -1,0 +1,49 @@
+Upgrade game Python "Zombie Dungeon Escape" dengan Pygame agar lebih seru dengan loot & equipment system:
+
+1. Loot Drop:
+   - Zombie yang mati punya peluang drop item (potion, gold, equipment).
+   - Item drop muncul di tanah dengan sprite glowing kecil.
+   - Player bisa menekan tombol [F] untuk pickup item.
+
+2. Chest System:
+   - Chest muncul secara acak di dungeon.
+   - Chest bisa berisi potion, gold, atau equipment.
+   - Interaksi dengan tombol [E] untuk membuka chest.
+   - Animasi chest terbuka lalu drop item di sekitar.
+
+3. Equipment & Inventory System:
+   - Inventory panel (dibuka dengan tombol [Tab]) berupa grid 4x5 slot.
+   - Item ditampilkan sebagai ikon (potion, sword, shield, armor).
+   - Equipment panel dengan slot:
+     - Head
+     - Body
+     - Weapon
+     - Shield
+   - Player dapat equip/unequip item, stats berubah otomatis.
+   - Tooltip saat hover item menampilkan deskripsi (contoh: "Sword +5 Attack").
+
+4. UI Upgrade:
+   - Buat panel inventory dan equipment dengan texture (gunakan Kenney RPG UI Pack atau free assets).
+   - HP/Mana bar tetap ada di HUD.
+   - Skill toolbar (QWER) tetap ada di bagian bawah.
+   - Tambahkan loot popup saat pickup item: “Picked up Sword (+5 ATK)”.
+
+5. Assets:
+   - Gunakan free assets:
+     - Kenney RPG Items (sword, shield, potion, chest).
+     - Kenney RPG UI Pack untuk panel inventory & equipment.
+   - Rapikan folder:
+     assets/tiles, assets/characters, assets/items, assets/ui, assets/sounds
+
+6. Struktur Project:
+   - main.py (game loop).
+   - player.py (player class dengan equipment stats).
+   - zombie.py (zombie class + drop system).
+   - chest.py (chest class).
+   - items.py (item class + equipment stats).
+   - ui.py (inventory panel, equipment panel, loot popup, hud).
+   - labyrinth.py (map system + spawn chest).
+   - settings.py (config).
+   - assets/ (sprites & sounds).
+
+Tujuan: Game dungeon crawler survival dengan loot system, chest, equipment panel, dan UI inventory modern.
